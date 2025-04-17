@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tavernix Network Infrastructure Setup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Tavernix Network Infrastructure</h1>
+    <p>Small Office Network Setup for a 4–5 Employee Startup</p>
+  </header>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="#hardware">Hardware</a></li>
+      <li><a href="#provisioning">Devices</a></li>
+      <li><a href="#layout">Network Layout</a></li>
+      <li><a href="#security">Security &amp; Segmentation</a></li>
+      <li><a href="#cloud">Cloud Infrastructure</a></li>
+      <li><a href="#compliance">Compliance & Hardening</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Section 1: Hardware -->
+    <section id="hardware">
+      <h2>Hardware Components</h2>
+      <ul class="device-list">
+        <li><img src="images/modem.png" alt="Modem Logo" /><h3>Modem + Router</h3><p>Ubiquiti Dream Machine or TP‑Link Omada for routing & VLANs</p></li>
+        <li><img src="images/network-switch.png" alt="Managed Switch Logo" /><h3>Managed Switch</h3><p>5–8 port PoE‑capable switch for workstations, AP & printer</p></li>
+        <li><img src="images/printer.png" alt="Printer Logo" /><h3>Printer</h3><p>Network‑ready office printer for all departments</p></li>
+        <li><img src="images/voip.png" alt="VoIP Phone Logo" /><h3>VoIP Phones</h3><p>Optional PoE phones for office telephony</p></li>
+      </ul>
+    </section>
+
+    <!-- Section 2: Workstation / Device Provisioning -->
+    <section id="provisioning">
+      <h2>Workstation &amp; Cloud Provisioning</h2>
+      <h3>Company Devices</h3>
+      <ul class="device-list">
+        <li><img src="images/mac-mini.png" alt="Laptop Logo" /><h4>4 Laptops / Desktops</h4>
+          <ul>
+            <li>Windows 11 Pro or macOS</li>
+            <li>Names: TAV‑ENG01, TAV‑ENG02, TAV‑DES01, TAV‑MKT01</li>
+            <li>Encrypted (BitLocker / FileVault)</li>
+            <li>Managed via Intune (MDM)</li>
+          </ul>
+        </li>
+        <li><img src="images/awscloud.png" alt="AWS EC2 Logo" /><h4>AWS EC2</h4><p>Production hosting of public‑facing services</p></li>
+        <li><img src="images/azure.png" alt="Azure VM Logo" /><h4>Azure VM</h4><p>Development & testing environments</p></li>
+      </ul>
+      <h3>Software Stack</h3>
+      <ul class="device-list">
+        <li><img src="images/visualstudio.png" alt="VS Code Logo" /><h4>VS Code</h4></li>
+        <li><img src="images/docker.png" alt="Docker Logo" /><h4>Docker</h4></li>
+        <li><img src="images/node.js.png" alt="Node.js Logo" /><h4>Node.js</h4></li>
+        <li><img src="images/git.png" alt="Git Logo" /><h4>Git</h4></li>
+        <li><img src="images/adobe.png" alt="Adobe Suite Logo" /><h4>Adobe Suite</h4></li>
+        <li><img src="images/figma.png" alt="Figma Logo" /><h4>Figma</h4></li>
+        <li><img src="images/crm.png" alt="CRM Tools Logo" /><h4>CRM Tools</h4></li>
+        <li><img src="images/google-suite.png" alt="Google Suite Logo" /><h4>Google Suite</h4></li>
+        <li><img src="images/teams.png" alt="Zoom Logo" /><h4>Zoom</h4></li>
+      </ul>
+    </section>
+
+    <!-- Section 3: Network Layout -->
+    <section id="layout">
+      <h2>Network Layout</h2>
+      <p>Star topology off a central switch, with VLAN segmentation:</p>
+      <ul>
+        <li><strong>VLAN 10:</strong> Internal Workstations</li>
+        <li><strong>VLAN 20:</strong> Guest Wi‑Fi</li>
+        <li><strong>VLAN 30:</strong> VoIP Phones</li>
+        <li><strong>VLAN 40:</strong> Printers/IoT</li>
+      </ul>
+      <div class="diagram" style="text-align: center;">
+        <img src="images/networklayout.png" alt="Network Layout Diagram" />
+      </div>
+    </section>
+
+    <!-- Section 4: Security & Segmentation -->
+    <section id="security">
+      <h2>Security & Segmentation</h2>
+      <img src="images/security.png" alt="Security Diagram" class="security-banner">
+    </section>
+
+    <!-- Section 5: Cloud Infrastructure -->
+    <section id="cloud">
+      <h2>Cloud Infrastructure</h2>
+      <ul class="device-list">
+        <li><img src="images/awscloud.png" alt="AWS Logo" /><h4>AWS / Azure</h4><p>VMs for development, testing, and deployment</p></li>
+        <li><img src="images/github.png" alt="GitHub Logo" /><h4>GitHub / GitLab</h4><p>Source control for project collaboration</p></li>
+        <li><img src="images/backblaze.png" alt="Backblaze Logo" /><h4>Backblaze / Azure Backup</h4><p>Encrypted cloud backup solutions</p></li>
+        <li><img src="images/m365.png" alt="M365 Logo" /><h4>Google Workspace / Microsoft 365</h4><p>Email, Docs, Calendar & Cloud Storage</p></li>
+        <li><img src="images/rdp.png" alt="Remote Access Logo" /><h4>Remote Desktop (RDP / Apple Remote Desktop)</h4><p>With MFA for secure remote access</p></li>
+        <li><img src="images/vpn.png" alt="VPN Logo" /><h4>VPN Access</h4><p>WireGuard or OpenVPN for remote work</p></li>
+        <li><img src="images/app-development.png" alt="Internal Tools Logo" /><h4>Cloud-Hosted Internal Tools</h4><p>Dashboards, time tracking, internal admin panels</p></li>
+      </ul>
+    </section>
+
+    <!-- Section 6: Compliance & Hardening -->
+    <section id="compliance">
+      <h2>Compliance & Hardening</h2>
+      <ul class="device-list">
+        <li><img src="images/cyber-security.png" alt="Security Framework Icon"><h4>Security Frameworks</h4>
+          <ul>
+            <li>CIA Triad (Confidentiality, Integrity, Availability)</li>
+            <li>BitLocker on all devices</li>
+            <li>Least Privilege Access</li>
+            <li>MFA on cloud logins</li>
+            <li>Endpoint antivirus & patching</li>
+          </ul>
+        </li>
+        <li><img src="images/compliant.png" alt="Compliance Icon"><h4>Compliance Docs</h4>
+          <ul>
+            <li>HIPAA Template if handling sensitive data</li>
+            <li>Acceptable Use Policies</li>
+            <li>Employee onboarding & offboarding IT checklist</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tavernix.io. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
