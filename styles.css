@@ -2,7 +2,7 @@
 
 /* Base styling */
 body {
-  background-image: url('images/Tavernixlog.png');
+  background-image: url('images/tavernixlog.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -162,3 +162,4 @@ section#security ul {
   padding-left: 0;
   list-style-position: inside;
 }
+
